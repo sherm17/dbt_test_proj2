@@ -41,3 +41,5 @@ models:
     seeclickfix_requests_prod:
       schema: prod
       materialized: table
+    neighborhood:
+      schema: public
