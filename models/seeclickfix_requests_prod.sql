@@ -5,7 +5,8 @@ SELECT
     service_request_id,
     lat,
     long,
-    n.name
+    n.name,
+    stg.geometry
 FROM
     {{ ref('seeclickfix_requests_stage') }} stg,
     {{ ref('neighborhood') }} n
