@@ -9,6 +9,6 @@ SELECT
     n.name
 FROM
     {{ ref('seeclickfix_requests_stage') }} stg,
-    {{ ref('neighborhood') }} n
+    {{ source('boundary' ,'neighborhood') }} n
 WHERE ST_Contains(n.geometry, stg.geometry)
 
