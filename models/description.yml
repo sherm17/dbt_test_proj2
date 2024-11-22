@@ -23,7 +23,7 @@ models:
         tests:
           - unique
           - not_null
-- name: seeclickfix_requests_stage
+  - name: seeclickfix_requests_stage
     description: This table contains raw seeclickfix data. This table is created from the json files downloaded through the seeclickfix API
     columns:
       - name: service_request_id
@@ -31,9 +31,9 @@ models:
         tests:
           - unique
           - not_null
-      - address:
+      - name: address
         description: human readable address
-      - lat:
+      - name: lat
         description: latitude of request
-      - long:
+      - name: long
         description: longtitude of request
