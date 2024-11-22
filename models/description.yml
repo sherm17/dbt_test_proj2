@@ -1,11 +1,14 @@
 version: 1
 
-models:
-    - name: seeclickfix_requests_raw
-      description: This table contains raw seeclickfix data. This table is created from the json files downloaded through the seeclickfix API
-      columns:
-        - name: service_request_id
-          description: This is a unique identifer for each request
-          tests:
-            - unique
-            - not_null
+sources:
+  - name: requests
+    description: This table contains raw seeclickfix data. This table is created from the json files downloaded through the seeclickfix API
+    schema: raw
+    tables:
+      - name: seeclickfix_requests_raw
+        columns:
+          - name: service_request_id
+            description: This is a unique identifer for each request
+            tests:
+              - unique
+              - not_null

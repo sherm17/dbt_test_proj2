@@ -9,4 +9,4 @@ SELECT
     long,
     ST_SetSRID(ST_MakePoint(long, lat), 4326) as geometry
 FROM
-    {{ ref('seeclickfix_requests_raw') }}
+    {{ source('requests', 'seeclickfix_requests_raw') }}
